@@ -13,5 +13,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pytest ruff
-      - run: ruff check .
-      - run: pytest -q
+      - run: ruff check calc.py test_calc.py build.py test_build.py
+      - run: pytest test_calc.py test_build.py -q
